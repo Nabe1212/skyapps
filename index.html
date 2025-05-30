@@ -3,111 +3,233 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SkyApps - Home</title>
+  <title>Rooms by SkyApps | Book Luxury Stays</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <style>
     body {
       font-family: 'Inter', sans-serif;
     }
+    .hero-bg {
+      background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+      background-size: cover;
+      background-position: center;
+    }
   </style>
 </head>
-<body class="bg-gray-50 text-gray-900">
+<body class="bg-gray-50 text-gray-800">
 
   <!-- Navbar -->
-  <nav class="bg-white shadow-md">
+  <nav class="bg-white shadow-sm sticky top-0 z-50">
     <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-      <h1 class="text-xl font-bold text-blue-600">SkyApps</h1>
-      <div class="space-x-4 text-sm font-medium">
-        <a href="index.html" class="text-gray-700 hover:text-blue-600">Home</a>
-        <a href="browse.html" class="text-gray-700 hover:text-blue-600">Browse</a>
-        <a href="about.html" class="text-gray-700 hover:text-blue-600">About</a>
-        <a href="contact.html" class="text-gray-700 hover:text-blue-600">Contact</a>
-        <a href="login.html" class="text-gray-700 hover:text-blue-600">Login</a>
+      <div class="flex items-center space-x-2">
+        <i class="fas fa-hotel text-blue-600 text-xl"></i>
+        <h1 class="text-xl font-bold text-blue-600">Rooms by SkyApps</h1>
+      </div>
+      <div class="hidden md:flex space-x-6 text-sm font-medium">
+        <a href="index.html" class="text-blue-600 font-semibold">Home</a>
+        <a href="browse.html" class="text-gray-600 hover:text-blue-600">Browse Rooms</a>
+        <a href="deals.html" class="text-gray-600 hover:text-blue-600">Deals</a>
+        <a href="contact.html" class="text-gray-600 hover:text-blue-600">Contact</a>
+      </div>
+      <div class="flex items-center space-x-4">
+        <a href="login.html" class="text-gray-600 hover:text-blue-600 text-sm font-medium">Login</a>
+        <a href="register.html" class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 text-sm font-medium">Sign Up</a>
       </div>
     </div>
   </nav>
 
   <!-- Hero Section -->
-  <header class="bg-gradient-to-r from-blue-600 to-blue-500 text-white text-center py-16 px-4">
-    <h2 class="text-4xl font-extrabold mb-3">Discover the Best Mobile Apps</h2>
-    <p class="text-lg mb-6">Browse, search and download high-quality apps from SkyApps.</p>
-    <input
-      type="text"
-      placeholder="Search apps..."
-      class="w-full max-w-md mx-auto px-4 py-2 rounded shadow text-gray-800 focus:outline-none"
-    />
+  <header class="hero-bg text-white py-24 px-4 text-center">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="text-4xl font-bold mb-4">Find Your Perfect Stay</h2>
+      <p class="text-xl mb-8">Discover luxury rooms, hotels, and resorts at the best prices</p>
+      <div class="bg-white rounded-lg shadow-lg p-4 max-w-2xl mx-auto">
+        <div class="flex flex-col md:flex-row gap-4">
+          <div class="flex-1">
+            <label class="block text-gray-700 text-sm font-medium mb-1 text-left">Destination</label>
+            <input type="text" placeholder="Where are you going?" class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-800">
+          </div>
+          <div class="flex-1">
+            <label class="block text-gray-700 text-sm font-medium mb-1 text-left">Dates</label>
+            <input type="text" placeholder="Select dates" class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-800">
+          </div>
+          <button class="bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-700 self-end">Search</button>
+        </div>
+      </div>
+    </div>
   </header>
 
-  <!-- Ad Banner -->
-  <section class="max-w-5xl mx-auto px-4 mt-6">
-    <div
-      class="bg-yellow-100 text-yellow-800 p-4 text-center rounded border border-yellow-300 font-medium"
-    >
-      📢 <strong>Ad Space:</strong> Promote your app here!
+  <!-- Featured Rooms Section -->
+  <section class="max-w-7xl mx-auto px-4 py-16">
+    <div class="flex justify-between items-center mb-10">
+      <h3 class="text-2xl font-bold text-gray-800">Featured Rooms</h3>
+      <a href="#" class="text-blue-600 hover:underline text-sm font-medium">View all</a>
+    </div>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+      <!-- Room Card 1 -->
+      <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+        <div class="relative">
+          <img src="https://images.unsplash.com/photo-1566669437685-5f63c8edea5d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80" alt="Luxury Suite" class="w-full h-48 object-cover">
+          <span class="absolute top-3 right-3 bg-blue-600 text-white text-xs px-2 py-1 rounded-full">Popular</span>
+        </div>
+        <div class="p-5">
+          <div class="flex justify-between items-start">
+            <h4 class="font-bold text-lg">Luxury Ocean View Suite</h4>
+            <div class="flex items-center">
+              <i class="fas fa-star text-yellow-400 mr-1"></i>
+              <span class="font-medium">4.8</span>
+            </div>
+          </div>
+          <p class="text-gray-600 text-sm mt-2">Miami Beach • 2 guests • 1 bedroom</p>
+          <div class="mt-4 flex justify-between items-center">
+            <div>
+              <span class="text-gray-500 line-through text-sm">$350/night</span>
+              <p class="text-blue-600 font-bold">$299<span class="text-gray-500 text-sm font-normal">/night</span></p>
+            </div>
+            <button class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 text-sm">Book Now</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Room Card 2 -->
+      <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+        <div class="relative">
+          <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Executive Room" class="w-full h-48 object-cover">
+        </div>
+        <div class="p-5">
+          <div class="flex justify-between items-start">
+            <h4 class="font-bold text-lg">Executive King Room</h4>
+            <div class="flex items-center">
+              <i class="fas fa-star text-yellow-400 mr-1"></i>
+              <span class="font-medium">4.6</span>
+            </div>
+          </div>
+          <p class="text-gray-600 text-sm mt-2">New York • 2 guests • 1 bedroom</p>
+          <div class="mt-4 flex justify-between items-center">
+            <p class="text-blue-600 font-bold">$249<span class="text-gray-500 text-sm font-normal">/night</span></p>
+            <button class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 text-sm">Book Now</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Room Card 3 -->
+      <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+        <div class="relative">
+          <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Mountain View" class="w-full h-48 object-cover">
+          <span class="absolute top-3 right-3 bg-green-600 text-white text-xs px-2 py-1 rounded-full">Eco-Friendly</span>
+        </div>
+        <div class="p-5">
+          <div class="flex justify-between items-start">
+            <h4 class="font-bold text-lg">Mountain View Cabin</h4>
+            <div class="flex items-center">
+              <i class="fas fa-star text-yellow-400 mr-1"></i>
+              <span class="font-medium">4.9</span>
+            </div>
+          </div>
+          <p class="text-gray-600 text-sm mt-2">Aspen • 4 guests • 2 bedrooms</p>
+          <div class="mt-4 flex justify-between items-center">
+            <p class="text-blue-600 font-bold">$329<span class="text-gray-500 text-sm font-normal">/night</span></p>
+            <button class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 text-sm">Book Now</button>
+          </div>
+        </div>
+      </div>
+
     </div>
   </section>
 
-  <!-- Featured Apps Section -->
-  <section class="max-w-6xl mx-auto px-4 py-12">
-    <h3 class="text-2xl font-semibold mb-8 text-gray-800">📱 Featured Apps</h3>
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-
-      <!-- App Card 1 -->
-      <div class="bg-white rounded-xl shadow-md p-5 text-center">
-        <img
-          src="https://cdn-icons-png.flaticon.com/512/5977/5977575.png"
-          alt="ChatNow"
-          class="w-16 h-16 mx-auto mb-4"
-        />
-        <h4 class="font-bold text-lg">ChatNow</h4>
-        <p class="text-sm text-gray-600 mt-2">Fast, secure messaging app with global access.</p>
-        <button
-          class="mt-4 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 text-sm"
-        >
-          Download
-        </button>
+  <!-- Features Section -->
+  <section class="bg-blue-50 py-16">
+    <div class="max-w-7xl mx-auto px-4">
+      <h3 class="text-2xl font-bold text-center mb-12">Why Choose Rooms by SkyApps?</h3>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="text-center">
+          <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+            <i class="fas fa-shield-alt text-blue-600 text-2xl"></i>
+          </div>
+          <h4 class="font-bold text-lg mb-2">Secure Booking</h4>
+          <p class="text-gray-600">Your information and payments are always protected with our secure system.</p>
+        </div>
+        <div class="text-center">
+          <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+            <i class="fas fa-tag text-blue-600 text-2xl"></i>
+          </div>
+          <h4 class="font-bold text-lg mb-2">Best Price Guarantee</h4>
+          <p class="text-gray-600">Found a better price elsewhere? We'll match it and give you an additional discount.</p>
+        </div>
+        <div class="text-center">
+          <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+            <i class="fas fa-headset text-blue-600 text-2xl"></i>
+          </div>
+          <h4 class="font-bold text-lg mb-2">24/7 Support</h4>
+          <p class="text-gray-600">Our customer service team is available around the clock to assist you.</p>
+        </div>
       </div>
+    </div>
+  </section>
 
-      <!-- App Card 2 -->
-      <div class="bg-white rounded-xl shadow-md p-5 text-center">
-        <img
-          src="https://cdn-icons-png.flaticon.com/512/2922/2922510.png"
-          alt="PhotoPlus"
-          class="w-16 h-16 mx-auto mb-4"
-        />
-        <h4 class="font-bold text-lg">PhotoPlus</h4>
-        <p class="text-sm text-gray-600 mt-2">Edit your photos with smart filters and tools.</p>
-        <button
-          class="mt-4 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 text-sm"
-        >
-          Download
-        </button>
-      </div>
-
-      <!-- App Card 3 -->
-      <div class="bg-white rounded-xl shadow-md p-5 text-center">
-        <img
-          src="https://cdn-icons-png.flaticon.com/512/2965/2965567.png"
-          alt="FitTrack"
-          class="w-16 h-16 mx-auto mb-4"
-        />
-        <h4 class="font-bold text-lg">FitTrack</h4>
-        <p class="text-sm text-gray-600 mt-2">Track your fitness, steps, and health goals.</p>
-        <button
-          class="mt-4 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 text-sm"
-        >
-          Download
-        </button>
-      </div>
-
+  <!-- Newsletter -->
+  <section class="max-w-4xl mx-auto px-4 py-16 text-center">
+    <h3 class="text-2xl font-bold mb-4">Get Exclusive Deals</h3>
+    <p class="text-gray-600 mb-6">Subscribe to our newsletter and receive special offers and travel inspiration.</p>
+    <div class="flex flex-col sm:flex-row gap-2 max-w-md mx-auto">
+      <input type="email" placeholder="Your email address" class="flex-1 px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+      <button class="bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-700">Subscribe</button>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="bg-white text-center text-sm text-gray-500 py-6 mt-10 border-t">
-    &copy; 2025 SkyApps. All rights reserved.
+  <footer class="bg-gray-800 text-white py-12">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div>
+          <div class="flex items-center space-x-2 mb-4">
+            <i class="fas fa-hotel text-blue-400 text-xl"></i>
+            <h4 class="text-xl font-bold">Rooms by SkyApps</h4>
+          </div>
+          <p class="text-gray-400 text-sm">Finding you the perfect stay at the best prices since 2025.</p>
+        </div>
+        <div>
+          <h5 class="font-bold mb-4">Company</h5>
+          <ul class="space-y-2 text-sm text-gray-400">
+            <li><a href="#" class="hover:text-white">About Us</a></li>
+            <li><a href="#" class="hover:text-white">Careers</a></li>
+            <li><a href="#" class="hover:text-white">Press</a></li>
+            <li><a href="#" class="hover:text-white">Blog</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5 class="font-bold mb-4">Support</h5>
+          <ul class="space-y-2 text-sm text-gray-400">
+            <li><a href="#" class="hover:text-white">Help Center</a></li>
+            <li><a href="#" class="hover:text-white">Safety Information</a></li>
+            <li><a href="#" class="hover:text-white">Cancellation Options</a></li>
+            <li><a href="#" class="hover:text-white">Report Issue</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5 class="font-bold mb-4">Contact</h5>
+          <ul class="space-y-2 text-sm text-gray-400">
+            <li class="flex items-center"><i class="fas fa-map-marker-alt mr-2 text-blue-400"></i> 123 Hotel St, Miami</li>
+            <li class="flex items-center"><i class="fas fa-phone mr-2 text-blue-400"></i> +1 (555) 123-4567</li>
+            <li class="flex items-center"><i class="fas fa-envelope mr-2 text-blue-400"></i> hello@skyapps.com</li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-gray-700 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+        <p class="text-gray-400 text-sm mb-4 md:mb-0">&copy; 2025 Rooms by SkyApps. All rights reserved.</p>
+        <div class="flex space-x-4">
+          <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+    </div>
   </footer>
 
 </body>
-</html>
+  </html>
