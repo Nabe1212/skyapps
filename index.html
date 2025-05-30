@@ -1,235 +1,189 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Rooms by SkyApps | Book Luxury Stays</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  <style>
-    body {
-      font-family: 'Inter', sans-serif;
-    }
-    .hero-bg {
-      background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
-      background-size: cover;
-      background-position: center;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkyApps - Discover the Best Apps</title>
+    <style>
+        /* Professional Blue Theme */
+        :root {
+            --primary-blue: #2563EB;
+            --dark-blue: #1E40AF;
+            --light-blue: #3B82F6;
+            --sky-gradient: linear-gradient(135deg, #60A5FA 0%, #2563EB 100%);
+            --bg-light: #F8FAFC;
+            --text-dark: #1F2937;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+        }
+        /* Header */
+        header {
+            background: var(--sky-gradient);
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+        .logo {
+            font-size: 2rem;
+            font-weight: bold;
+        }
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            padding: 1rem;
+            background: var(--dark-blue);
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 3rem 1rem;
+            background: var(--sky-gradient);
+            color: white;
+        }
+        .hero h1 {
+            font-size: 2.5rem;
+        }
+        .cta-button {
+            background: white;
+            color: var(--primary-blue);
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 1rem;
+        }
+        /* App Grid */
+        .app-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1.5rem;
+            padding: 2rem;
+        }
+        .app-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        .app-card:hover {
+            transform: translateY(-5px);
+        }
+        .app-card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+        .app-info {
+            padding: 1rem;
+        }
+        .app-info h3 {
+            margin: 0;
+            color: var(--dark-blue);
+        }
+        .download-btn {
+            background: var(--primary-blue);
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            font-weight: bold;
+        }
+        /* Footer */
+        footer {
+            background: var(--dark-blue);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 2rem;
+        }
+    </style>
 </head>
-<body class="bg-gray-50 text-gray-800">
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">SkyApps</div>
+        <p>Discover the Best Apps in the Sky</p>
+    </header>
 
-  <!-- Navbar -->
-  <nav class="bg-white shadow-sm sticky top-0 z-50">
-    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-      <div class="flex items-center space-x-2">
-        <i class="fas fa-hotel text-blue-600 text-xl"></i>
-        <h1 class="text-xl font-bold text-blue-600">Rooms by SkyApps</h1>
-      </div>
-      <div class="hidden md:flex space-x-6 text-sm font-medium">
-        <a href="index.html" class="text-blue-600 font-semibold">Home</a>
-        <a href="browse.html" class="text-gray-600 hover:text-blue-600">Browse Rooms</a>
-        <a href="deals.html" class="text-gray-600 hover:text-blue-600">Deals</a>
-        <a href="contact.html" class="text-gray-600 hover:text-blue-600">Contact</a>
-      </div>
-      <div class="flex items-center space-x-4">
-        <a href="login.html" class="text-gray-600 hover:text-blue-600 text-sm font-medium">Login</a>
-        <a href="register.html" class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 text-sm font-medium">Sign Up</a>
-      </div>
-    </div>
-  </nav>
+    <!-- Navigation -->
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#apps">Apps</a>
+        <a href="#categories">Categories</a>
+        <a href="#about">About</a>
+    </nav>
 
-  <!-- Hero Section -->
-  <header class="hero-bg text-white py-24 px-4 text-center">
-    <div class="max-w-3xl mx-auto">
-      <h2 class="text-4xl font-bold mb-4">Find Your Perfect Stay</h2>
-      <p class="text-xl mb-8">Discover luxury rooms, hotels, and resorts at the best prices</p>
-      <div class="bg-white rounded-lg shadow-lg p-4 max-w-2xl mx-auto">
-        <div class="flex flex-col md:flex-row gap-4">
-          <div class="flex-1">
-            <label class="block text-gray-700 text-sm font-medium mb-1 text-left">Destination</label>
-            <input type="text" placeholder="Where are you going?" class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-800">
-          </div>
-          <div class="flex-1">
-            <label class="block text-gray-700 text-sm font-medium mb-1 text-left">Dates</label>
-            <input type="text" placeholder="Select dates" class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-800">
-          </div>
-          <button class="bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-700 self-end">Search</button>
-        </div>
-      </div>
-    </div>
-  </header>
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <h1>Your Gateway to Amazing Apps</h1>
+        <p>Download the best tools, games, and utilities for free.</p>
+        <a href="#apps" class="cta-button">Explore Apps</a>
+    </section>
 
-  <!-- Featured Rooms Section -->
-  <section class="max-w-7xl mx-auto px-4 py-16">
-    <div class="flex justify-between items-center mb-10">
-      <h3 class="text-2xl font-bold text-gray-800">Featured Rooms</h3>
-      <a href="#" class="text-blue-600 hover:underline text-sm font-medium">View all</a>
-    </div>
-    
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-
-      <!-- Room Card 1 -->
-      <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
-        <div class="relative">
-          <img src="https://images.unsplash.com/photo-1566669437685-5f63c8edea5d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80" alt="Luxury Suite" class="w-full h-48 object-cover">
-          <span class="absolute top-3 right-3 bg-blue-600 text-white text-xs px-2 py-1 rounded-full">Popular</span>
-        </div>
-        <div class="p-5">
-          <div class="flex justify-between items-start">
-            <h4 class="font-bold text-lg">Luxury Ocean View Suite</h4>
-            <div class="flex items-center">
-              <i class="fas fa-star text-yellow-400 mr-1"></i>
-              <span class="font-medium">4.8</span>
+    <!-- Featured Apps -->
+    <section id="apps" style="padding: 2rem;">
+        <h2 style="text-align: center; color: var(--dark-blue);">Featured Apps</h2>
+        <div class="app-grid">
+            <!-- App 1 -->
+            <div class="app-card">
+                <img src="https://via.placeholder.com/300x150?text=App+1" alt="App 1">
+                <div class="app-info">
+                    <h3>Weather Pro</h3>
+                    <p>Accurate forecasts and radar.</p>
+                    <button class="download-btn">Download</button>
+                </div>
             </div>
-          </div>
-          <p class="text-gray-600 text-sm mt-2">Miami Beach • 2 guests • 1 bedroom</p>
-          <div class="mt-4 flex justify-between items-center">
-            <div>
-              <span class="text-gray-500 line-through text-sm">$350/night</span>
-              <p class="text-blue-600 font-bold">$299<span class="text-gray-500 text-sm font-normal">/night</span></p>
+            <!-- App 2 -->
+            <div class="app-card">
+                <img src="https://via.placeholder.com/300x150?text=App+2" alt="App 2">
+                <div class="app-info">
+                    <h3>SkyWallet</h3>
+                    <p>Secure mobile payments.</p>
+                    <button class="download-btn">Download</button>
+                </div>
             </div>
-            <button class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 text-sm">Book Now</button>
-          </div>
-        </div>
-      </div>
-
-      <!-- Room Card 2 -->
-      <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
-        <div class="relative">
-          <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Executive Room" class="w-full h-48 object-cover">
-        </div>
-        <div class="p-5">
-          <div class="flex justify-between items-start">
-            <h4 class="font-bold text-lg">Executive King Room</h4>
-            <div class="flex items-center">
-              <i class="fas fa-star text-yellow-400 mr-1"></i>
-              <span class="font-medium">4.6</span>
+            <!-- App 3 -->
+            <div class="app-card">
+                <img src="https://via.placeholder.com/300x150?text=App+3" alt="App 3">
+                <div class="app-info">
+                    <h3>Cloud Notes</h3>
+                    <p>Sync notes across devices.</p>
+                    <button class="download-btn">Download</button>
+                </div>
             </div>
-          </div>
-          <p class="text-gray-600 text-sm mt-2">New York • 2 guests • 1 bedroom</p>
-          <div class="mt-4 flex justify-between items-center">
-            <p class="text-blue-600 font-bold">$249<span class="text-gray-500 text-sm font-normal">/night</span></p>
-            <button class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 text-sm">Book Now</button>
-          </div>
         </div>
-      </div>
+    </section>
 
-      <!-- Room Card 3 -->
-      <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
-        <div class="relative">
-          <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Mountain View" class="w-full h-48 object-cover">
-          <span class="absolute top-3 right-3 bg-green-600 text-white text-xs px-2 py-1 rounded-full">Eco-Friendly</span>
+    <!-- Categories -->
+    <section id="categories" style="padding: 2rem; background: white;">
+        <h2 style="text-align: center; color: var(--dark-blue);">Categories</h2>
+        <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem;">
+            <span style="background: var(--light-blue); color: white; padding: 0.5rem 1rem; border-radius: 20px;">Productivity</span>
+            <span style="background: var(--light-blue); color: white; padding: 0.5rem 1rem; border-radius: 20px;">Games</span>
+            <span style="background: var(--light-blue); color: white; padding: 0.5rem 1rem; border-radius: 20px;">Social</span>
+            <span style="background: var(--light-blue); color: white; padding: 0.5rem 1rem; border-radius: 20px;">Utilities</span>
         </div>
-        <div class="p-5">
-          <div class="flex justify-between items-start">
-            <h4 class="font-bold text-lg">Mountain View Cabin</h4>
-            <div class="flex items-center">
-              <i class="fas fa-star text-yellow-400 mr-1"></i>
-              <span class="font-medium">4.9</span>
-            </div>
-          </div>
-          <p class="text-gray-600 text-sm mt-2">Aspen • 4 guests • 2 bedrooms</p>
-          <div class="mt-4 flex justify-between items-center">
-            <p class="text-blue-600 font-bold">$329<span class="text-gray-500 text-sm font-normal">/night</span></p>
-            <button class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 text-sm">Book Now</button>
-          </div>
-        </div>
-      </div>
+    </section>
 
-    </div>
-  </section>
-
-  <!-- Features Section -->
-  <section class="bg-blue-50 py-16">
-    <div class="max-w-7xl mx-auto px-4">
-      <h3 class="text-2xl font-bold text-center mb-12">Why Choose Rooms by SkyApps?</h3>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div class="text-center">
-          <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-            <i class="fas fa-shield-alt text-blue-600 text-2xl"></i>
-          </div>
-          <h4 class="font-bold text-lg mb-2">Secure Booking</h4>
-          <p class="text-gray-600">Your information and payments are always protected with our secure system.</p>
-        </div>
-        <div class="text-center">
-          <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-            <i class="fas fa-tag text-blue-600 text-2xl"></i>
-          </div>
-          <h4 class="font-bold text-lg mb-2">Best Price Guarantee</h4>
-          <p class="text-gray-600">Found a better price elsewhere? We'll match it and give you an additional discount.</p>
-        </div>
-        <div class="text-center">
-          <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-            <i class="fas fa-headset text-blue-600 text-2xl"></i>
-          </div>
-          <h4 class="font-bold text-lg mb-2">24/7 Support</h4>
-          <p class="text-gray-600">Our customer service team is available around the clock to assist you.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Newsletter -->
-  <section class="max-w-4xl mx-auto px-4 py-16 text-center">
-    <h3 class="text-2xl font-bold mb-4">Get Exclusive Deals</h3>
-    <p class="text-gray-600 mb-6">Subscribe to our newsletter and receive special offers and travel inspiration.</p>
-    <div class="flex flex-col sm:flex-row gap-2 max-w-md mx-auto">
-      <input type="email" placeholder="Your email address" class="flex-1 px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
-      <button class="bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-700">Subscribe</button>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="bg-gray-800 text-white py-12">
-    <div class="max-w-7xl mx-auto px-4">
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-        <div>
-          <div class="flex items-center space-x-2 mb-4">
-            <i class="fas fa-hotel text-blue-400 text-xl"></i>
-            <h4 class="text-xl font-bold">Rooms by SkyApps</h4>
-          </div>
-          <p class="text-gray-400 text-sm">Finding you the perfect stay at the best prices since 2025.</p>
-        </div>
-        <div>
-          <h5 class="font-bold mb-4">Company</h5>
-          <ul class="space-y-2 text-sm text-gray-400">
-            <li><a href="#" class="hover:text-white">About Us</a></li>
-            <li><a href="#" class="hover:text-white">Careers</a></li>
-            <li><a href="#" class="hover:text-white">Press</a></li>
-            <li><a href="#" class="hover:text-white">Blog</a></li>
-          </ul>
-        </div>
-        <div>
-          <h5 class="font-bold mb-4">Support</h5>
-          <ul class="space-y-2 text-sm text-gray-400">
-            <li><a href="#" class="hover:text-white">Help Center</a></li>
-            <li><a href="#" class="hover:text-white">Safety Information</a></li>
-            <li><a href="#" class="hover:text-white">Cancellation Options</a></li>
-            <li><a href="#" class="hover:text-white">Report Issue</a></li>
-          </ul>
-        </div>
-        <div>
-          <h5 class="font-bold mb-4">Contact</h5>
-          <ul class="space-y-2 text-sm text-gray-400">
-            <li class="flex items-center"><i class="fas fa-map-marker-alt mr-2 text-blue-400"></i> 123 Hotel St, Miami</li>
-            <li class="flex items-center"><i class="fas fa-phone mr-2 text-blue-400"></i> +1 (555) 123-4567</li>
-            <li class="flex items-center"><i class="fas fa-envelope mr-2 text-blue-400"></i> hello@skyapps.com</li>
-          </ul>
-        </div>
-      </div>
-      <div class="border-t border-gray-700 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
-        <p class="text-gray-400 text-sm mb-4 md:mb-0">&copy; 2025 Rooms by SkyApps. All rights reserved.</p>
-        <div class="flex space-x-4">
-          <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f"></i></a>
-          <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
-          <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
-          <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-linkedin-in"></i></a>
-        </div>
-      </div>
-    </div>
-  </footer>
-
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 SkyApps. All rights reserved.</p>
+        <p>Contact: support@skyapps.com</p>
+    </footer>
 </body>
-  </html>
+</html>
