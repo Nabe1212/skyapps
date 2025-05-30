@@ -2,58 +2,137 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>SkyApps - Discover Apps</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SkyApps - Discover the Best Mobile Apps</title>
+  <meta name="description" content="SkyApps - Browse, search and download top-quality mobile apps. Discover your next favorite app today!" />
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.3.2/dist/tailwind.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+  </style>
 </head>
-<body class="bg-gray-100 text-gray-800">
+<body class="bg-blue-50 text-gray-900">
 
-  <!-- Navigation Bar -->
-  <nav class="bg-blue-600 text-white p-4 flex justify-between items-center">
-    <div class="text-2xl font-bold mr-6">SkyApps</div>
-    <div class="space-x-6 flex items-center">
-      <a href="index.html" class="hover:underline">Home</a>
-      <a href="browse.html" class="hover:underline">Browse</a>
-      <a href="about.html" class="hover:underline">About</a>
-      <a href="contact.html" class="hover:underline">Contact</a>
-      <a href="login.html" class="hover:underline">Login</a>
+  <!-- Navbar -->
+  <nav class="bg-white shadow">
+    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+      <h1 class="text-2xl font-extrabold text-blue-600">SkyApps</h1>
+      <div class="space-x-6 text-sm font-semibold text-gray-700">
+        <a href="index.html" class="hover:text-blue-600">Home</a>
+        <a href="browse.html" class="hover:text-blue-600">Browse</a>
+        <a href="about.html" class="hover:text-blue-600">About</a>
+        <a href="contact.html" class="hover:text-blue-600">Contact</a>
+        <a href="login.html" class="hover:text-blue-600">Login</a>
+      </div>
     </div>
   </nav>
 
   <!-- Hero Section -->
-  <section class="text-center py-10 bg-blue-500 text-white">
-    <h1 class="text-4xl font-bold mb-4">Discover the Best Mobile Apps</h1>
-    <p class="mb-6 text-lg">Browse, search and download top-quality apps on SkyApps</p>
+  <header class="bg-gradient-to-r from-blue-700 to-blue-600 text-white text-center py-20 px-4">
+    <h2 class="text-4xl md:text-5xl font-extrabold mb-4">Discover the Best Mobile Apps</h2>
+    <p class="text-lg md:text-xl mb-8 max-w-xl mx-auto">Browse, search, and download high-quality apps from SkyApps.</p>
     <input
-      type="text"
+      type="search"
+      aria-label="Search apps"
       placeholder="Search apps..."
-      class="p-3 w-4/5 max-w-md rounded shadow text-gray-800"
+      class="w-full max-w-md mx-auto px-5 py-3 rounded-lg text-gray-900 shadow focus:outline-none focus:ring-4 focus:ring-blue-400 transition"
     />
-  </section>
+  </header>
 
-  <!-- Ad Space -->
-  <section class="p-4 bg-yellow-100 text-center">
-    <strong>Ad Space:</strong> Promote your app here!
+  <!-- Ad Banner -->
+  <section class="bg-yellow-200 py-5 mt-10">
+    <div class="container mx-auto px-6 text-center text-yellow-900 font-semibold border border-yellow-300 rounded-lg">
+      📢 <strong>Ad Space:</strong> Promote your app here!
+    </div>
   </section>
 
   <!-- Featured Apps -->
-  <section class="p-6">
-    <h2 class="text-2xl font-bold mb-4">Featured Apps</h2>
+  <section class="py-16">
+    <div class="container mx-auto px-6 max-w-7xl">
+      <h3 class="text-3xl font-bold mb-10 text-gray-800 flex items-center gap-3">
+        <span>📱</span> Featured Apps
+      </h3>
+      <div class="grid gap-10 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+        <!-- App Card 1 -->
+        <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center text-center hover:shadow-xl transition">
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/5977/5977575.png"
+            alt="ChatNow app icon"
+            class="w-20 h-20 mb-5 rounded-lg"
+            loading="lazy"
+          />
+          <h4 class="font-semibold text-lg mb-2">ChatNow</h4>
+          <p class="text-gray-600 mb-4">Fast, secure messaging with anyone worldwide.</p>
+          <button
+            type="button"
+            class="bg-blue-600 text-white px-5 py-2 rounded-lg text-sm font-semibold hover:bg-blue-700 focus:outline-none focus:ring-4 focus:ring-blue-400 transition"
+          >
+            Download
+          </button>
+        </div>
 
-    <!-- App Card -->
-    <div class="bg-white shadow-md rounded-lg p-4 mb-4 flex items-center">
-      <img src="https://via.placeholder.com/60" alt="App Icon" class="w-16 h-16 mr-4 rounded" />
-      <div>
-        <h3 class="text-lg font-bold">ChatNow</h3>
-        <p class="text-sm text-gray-600">Fast, secure messaging with anyone worldwide.</p>
+        <!-- App Card 2 -->
+        <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center text-center hover:shadow-xl transition">
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/2922/2922510.png"
+            alt="PhotoPlus app icon"
+            class="w-20 h-20 mb-5 rounded-lg"
+            loading="lazy"
+          />
+          <h4 class="font-semibold text-lg mb-2">PhotoPlus</h4>
+          <p class="text-gray-600 mb-4">Edit your photos with smart filters and tools.</p>
+          <button
+            type="button"
+            class="bg-blue-600 text-white px-5 py-2 rounded-lg text-sm font-semibold hover:bg-blue-700 focus:outline-none focus:ring-4 focus:ring-blue-400 transition"
+          >
+            Download
+          </button>
+        </div>
+
+        <!-- App Card 3 -->
+        <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center text-center hover:shadow-xl transition">
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/2965/2965567.png"
+            alt="FitTrack app icon"
+            class="w-20 h-20 mb-5 rounded-lg"
+            loading="lazy"
+          />
+          <h4 class="font-semibold text-lg mb-2">FitTrack</h4>
+          <p class="text-gray-600 mb-4">Track your fitness, steps, and health goals.</p>
+          <button
+            type="button"
+            class="bg-blue-600 text-white px-5 py-2 rounded-lg text-sm font-semibold hover:bg-blue-700 focus:outline-none focus:ring-4 focus:ring-blue-400 transition"
+          >
+            Download
+          </button>
+        </div>
+
+        <!-- App Card 4 -->
+        <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center text-center hover:shadow-xl transition">
+          <div
+            class="w-20 h-20 mb-5 bg-gray-200 flex items-center justify-center rounded-lg text-gray-400 font-semibold select-none"
+            aria-hidden="true"
+          >
+            Icon
+          </div>
+          <h4 class="font-semibold text-lg mb-2">Coming Soon</h4>
+          <p class="text-gray-600 mb-4">Stay tuned for more exciting apps!</p>
+          <button
+            type="button"
+            disabled
+            class="bg-gray-400 cursor-not-allowed text-white px-5 py-2 rounded-lg text-sm font-semibold"
+          >
+            Download
+          </button>
+        </div>
       </div>
     </div>
-
-    <!-- Add more app cards here -->
   </section>
 
   <!-- Footer -->
-  <footer class="bg-blue-600 text-white text-center py-4 mt-10">
+  <footer class="bg-white border-t border-gray-200 py-6 text-center text-gray-500 text-sm">
     &copy; 2025 SkyApps. All rights reserved.
   </footer>
 
