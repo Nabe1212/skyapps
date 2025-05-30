@@ -10,9 +10,6 @@
     body {
       font-family: 'Inter', sans-serif;
     }
-    button:focus, input:focus {
-      outline-offset: 2px;
-    }
   </style>
   <link rel="icon" href="/favicon.ico" />
 </head>
@@ -23,7 +20,7 @@
     <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
       <a href="index.html" class="text-2xl font-extrabold text-blue-600 hover:text-blue-700" aria-label="SkyApps Home">SkyApps</a>
       <div class="space-x-6 text-base font-semibold tracking-wide">
-        <a href="index.html" class="text-gray-700 hover:text-blue-600 hover:underline transition">Home</a>
+        <a href="index.html" class="text-blue-600 underline">Home</a>
         <a href="browse.html" class="text-gray-700 hover:text-blue-600 hover:underline transition">Browse</a>
         <a href="about.html" class="text-gray-700 hover:text-blue-600 hover:underline transition">About</a>
         <a href="contact.html" class="text-gray-700 hover:text-blue-600 hover:underline transition">Contact</a>
@@ -47,19 +44,12 @@
     </form>
   </header>
 
-  <!-- Ad Banner -->
-  <section class="max-w-5xl mx-auto px-6 mt-8">
-    <div class="bg-yellow-100 text-yellow-900 p-5 text-center rounded-lg border border-yellow-300 font-semibold select-none shadow-sm">
-      📢 <strong>Ad Space:</strong> Promote your app here!
-    </div>
-  </section>
-
   <!-- Featured Apps -->
   <main class="max-w-7xl mx-auto px-6 py-16">
     <h3 class="text-3xl font-semibold mb-10 text-gray-800">📱 Featured Apps</h3>
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
 
-      <!-- App Card 1 -->
+      <!-- Example App Card -->
       <article class="bg-white rounded-2xl shadow-lg p-6 text-center hover:shadow-xl transition-shadow duration-300">
         <img src="https://cdn-icons-png.flaticon.com/512/5977/5977575.png" alt="ChatNow app icon" class="w-20 h-20 mx-auto mb-5" />
         <h4 class="font-extrabold text-xl text-gray-900">ChatNow</h4>
@@ -73,33 +63,7 @@
         </button>
       </article>
 
-      <!-- App Card 2 -->
-      <article class="bg-white rounded-2xl shadow-lg p-6 text-center hover:shadow-xl transition-shadow duration-300">
-        <img src="https://cdn-icons-png.flaticon.com/512/2922/2922510.png" alt="PhotoPlus app icon" class="w-20 h-20 mx-auto mb-5" />
-        <h4 class="font-extrabold text-xl text-gray-900">PhotoPlus</h4>
-        <p class="text-gray-600 mt-3 text-sm leading-relaxed">Edit your photos with smart filters and tools.</p>
-        <button
-          class="mt-6 bg-blue-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-blue-700 active:scale-95 transition transform shadow-md"
-          aria-label="Download PhotoPlus app"
-          type="button"
-        >
-          Download
-        </button>
-      </article>
-
-      <!-- App Card 3 -->
-      <article class="bg-white rounded-2xl shadow-lg p-6 text-center hover:shadow-xl transition-shadow duration-300">
-        <img src="https://cdn-icons-png.flaticon.com/512/2965/2965567.png" alt="FitTrack app icon" class="w-20 h-20 mx-auto mb-5" />
-        <h4 class="font-extrabold text-xl text-gray-900">FitTrack</h4>
-        <p class="text-gray-600 mt-3 text-sm leading-relaxed">Track your fitness, steps, and health goals.</p>
-        <button
-          class="mt-6 bg-blue-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-blue-700 active:scale-95 transition transform shadow-md"
-          aria-label="Download FitTrack app"
-          type="button"
-        >
-          Download
-        </button>
-      </article>
+      <!-- Add more app cards here -->
 
     </div>
   </main>
