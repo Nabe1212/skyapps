@@ -1,49 +1,83 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SkyApps - Discover Mobile Apps</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <title>SkyApps - Home</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+  </style>
 </head>
-<body class="bg-blue-50 text-gray-800">
-  <!-- Header -->
-  <header class="bg-blue-700 text-white shadow">
-    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-      <h1 class="text-2xl font-bold">SkyApps</h1>
-      <nav class="space-x-3 text-sm">
-        <a href="index.html" class="hover:underline">Home</a>
-        <a href="browse.html" class="hover:underline">Browse</a>
-        <a href="about.html" class="hover:underline">About</a>
-        <a href="contact.html" class="hover:underline">Contact</a>
-        <a href="login.html" class="hover:underline">Login</a>
-      </nav>
-    </div>
-  </header>  <!-- Hero Section -->  <section class="bg-blue-600 text-white py-16">
-    <div class="container mx-auto px-4 text-center">
-      <h2 class="text-3xl md:text-4xl font-bold mb-4">Discover the Best Mobile Apps</h2>
-      <p class="mb-6 text-sm md:text-base">Browse, search and download top-quality apps on SkyApps</p>
-      <input type="text" placeholder="Search apps..." class="px-4 py-2 rounded text-gray-800 w-full max-w-md" />
-    </div>
-  </section>  <!-- Ad Section -->  <section class="bg-yellow-200 py-4">
-    <div class="container mx-auto px-4 text-center text-yellow-900 font-semibold">
-      <span class="font-bold">Ad Space:</span> Promote your app here!
-    </div>
-  </section>  <!-- Featured Apps -->  <section class="py-12">
-    <div class="container mx-auto px-4">
-      <h3 class="text-xl font-bold mb-6">Featured Apps</h3>
-      <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        <!-- Example App Card -->
-        <div class="bg-white p-4 rounded-lg shadow">
-          <div class="mb-2 h-16 w-16 bg-gray-200 flex items-center justify-center rounded">App Icon</div>
-          <h4 class="text-lg font-semibold">ChatNow</h4>
-          <p class="text-sm">Fast, secure messaging with anyone worldwide.</p>
-          <button class="mt-3 px-4 py-2 bg-blue-600 text-white rounded text-sm">Download</button>
-        </div>
-        <!-- Add more apps as needed -->
+<body class="bg-gray-50 text-gray-900">
+
+  <!-- Navbar -->
+  <nav class="bg-white shadow-md">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <h1 class="text-xl font-bold text-blue-600">SkyApps</h1>
+      <div class="space-x-4 text-sm font-medium">
+        <a href="index.html" class="text-gray-700 hover:text-blue-600">Home</a>
+        <a href="browse.html" class="text-gray-700 hover:text-blue-600">Browse</a>
+        <a href="about.html" class="text-gray-700 hover:text-blue-600">About</a>
+        <a href="contact.html" class="text-gray-700 hover:text-blue-600">Contact</a>
+        <a href="login.html" class="text-gray-700 hover:text-blue-600">Login</a>
       </div>
     </div>
-  </section>  <!-- Footer -->  <footer class="bg-gray-100 text-center py-4 text-sm text-gray-600">
+  </nav>
+
+  <!-- Hero -->
+  <header class="bg-gradient-to-r from-blue-600 to-blue-500 text-white text-center py-16 px-4">
+    <h2 class="text-4xl font-extrabold mb-3">Discover the Best Mobile Apps</h2>
+    <p class="text-lg mb-6">Browse, search and download high-quality apps from SkyApps.</p>
+    <input type="text" placeholder="Search apps..." class="w-full max-w-md mx-auto px-4 py-2 rounded shadow text-gray-800 focus:outline-none" />
+  </header>
+
+  <!-- Ad Banner -->
+  <section class="max-w-5xl mx-auto px-4 mt-6">
+    <div class="bg-yellow-100 text-yellow-800 p-4 text-center rounded border border-yellow-300 font-medium">
+      📢 <strong>Ad Space:</strong> Promote your app here!
+    </div>
+  </section>
+
+  <!-- Featured Apps -->
+  <section class="max-w-6xl mx-auto px-4 py-12">
+    <h3 class="text-2xl font-semibold mb-8 text-gray-800">📱 Featured Apps</h3>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+
+      <!-- App Card 1 -->
+      <div class="bg-white rounded-xl shadow-md p-5 text-center">
+        <img src="https://cdn-icons-png.flaticon.com/512/5977/5977575.png" alt="ChatNow" class="w-16 h-16 mx-auto mb-4">
+        <h4 class="font-bold text-lg">ChatNow</h4>
+        <p class="text-sm text-gray-600 mt-2">Fast, secure messaging app with global access.</p>
+        <button class="mt-4 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 text-sm">Download</button>
+      </div>
+
+      <!-- App Card 2 -->
+      <div class="bg-white rounded-xl shadow-md p-5 text-center">
+        <img src="https://cdn-icons-png.flaticon.com/512/2922/2922510.png" alt="PhotoPlus" class="w-16 h-16 mx-auto mb-4">
+        <h4 class="font-bold text-lg">PhotoPlus</h4>
+        <p class="text-sm text-gray-600 mt-2">Edit your photos with smart filters and tools.</p>
+        <button class="mt-4 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 text-sm">Download</button>
+      </div>
+
+      <!-- App Card 3 -->
+      <div class="bg-white rounded-xl shadow-md p-5 text-center">
+        <img src="https://cdn-icons-png.flaticon.com/512/2965/2965567.png" alt="FitTrack" class="w-16 h-16 mx-auto mb-4">
+        <h4 class="font-bold text-lg">FitTrack</h4>
+        <p class="text-sm text-gray-600 mt-2">Track your fitness, steps, and health goals.</p>
+        <button class="mt-4 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 text-sm">Download</button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-white text-center text-sm text-gray-500 py-6 mt-10 border-t">
     &copy; 2025 SkyApps. All rights reserved.
   </footer>
+
 </body>
 </html>
