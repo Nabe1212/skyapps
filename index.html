@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>SkyApps - Discover Android Apps</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SkyApps - Home</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
@@ -18,30 +18,23 @@
   </header>
 
   <main id="app-list">
-    <!-- Featured apps will load here -->
+    <div class="app-card">
+      <img src="assets/app-icons/sample1.png" alt="Sample Game">
+      <h3>Sample Game</h3>
+      <p>Version: 1.2 | Size: 80MB</p>
+      <a href="#">⬇️ Download APK</a>
+    </div>
+
+    <div class="app-card">
+      <img src="assets/app-icons/sample2.png" alt="Utility App">
+      <h3>Utility App</h3>
+      <p>Version: 3.1 | Size: 12MB</p>
+      <a href="#">⬇️ Download APK</a>
+    </div>
   </main>
 
   <footer>
     <p>© 2025 SkyApps. All rights reserved.</p>
   </footer>
-
-  <script>
-    const apps = [
-      { name: "Featured Game", icon: "assets/app-icons/game1.png", version: "1.2", size: "88MB", apk: "#" },
-      { name: "Top Tool", icon: "assets/app-icons/tool1.png", version: "2.0", size: "15MB", apk: "#" }
-    ];
-
-    const appList = document.getElementById("app-list");
-    apps.forEach(app => {
-      appList.innerHTML += `
-        <div class="app-card">
-          <img src="${app.icon}" alt="${app.name}">
-          <h3>${app.name}</h3>
-          <p>Version: ${app.version} | Size: ${app.size}</p>
-          <a href="${app.apk}">⬇️ Download</a>
-        </div>
-      `;
-    });
-  </script>
 </body>
 </html>
